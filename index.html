@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+Symbols+2&display=swap" rel="stylesheet"> 
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    
+    
+    <title>TinyRecords</title>
+    <style>
+        
+        body {
+            background-color: black;
+        }
+        
+        
+        marquee {
+font-family: 'Archivo Black', sans-serif;
+text-transform:uppercase;
+font-size: 2vw;
+color: white;
+margin-top: 2%;
+        }
+    
+        input {
+            font-size: 2vw;
+            height: 2.5vw;
+            width: 90%;
+            margin-left: 5%;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color:aquamarine;
+            color: black;
+        }
+        
+        table {
+            vertical-align: text-top;
+            table-layout:auto;
+            color: white;
+            width: 90%;
+            margin-left: 5%;
+        }
+    
+        th {
+            font-size: 2vw;
+            text-align: left;
+            font-family: 'Archivo Black', sans-serif;
+            cursor: pointer;    
+            }
+        
+        td {
+            font-family: 'Rubik', sans-serif;
+            font-size: 2vw;
+            text-align: left;
+            cursor: none;
+            padding-right: 2vw;
+            padding-bottom: 1vw;
+            
+        }
+    </style>
+    
+    <body>
+    
+         <marquee width="100%" direction="left" height="2%">
+<em>/ / / Tiny Records / / /</em>
+        </marquee>  
+        
+        <br>
+        <br>
+        
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+        <br>
+        <br>
+        
+    <table id="catalog">
+        <tr>
+        <th onclick="sortTable(0)">Album</th>
+        <th onclick="sortTable(1)">Artist</th>
+        <th onclick="sortTable(2)">Year</th>    
+        <th onclick="sortTable(3)">Genre</th>
+        <th onclick="sortTable(4)">Other</th>
+        </tr>
+        
+      
+        <tr>
+        <td>Twin Peaks: Fire Walk With Me</td>
+        <td>Angelo Badalamenti</td>
+        <td>1993</td>
+        <td>Soundtrack</td>
+        <td>GAX</td>
+        </tr>
+        
+        <tr>
+        <td>Naming &amp; Blaming</td>
+        <td>The Public Opinion Afro Orchestra</td>
+        <td>2018</td>
+        <td>Afrobeat</td>
+        <td>Local</td>
+        </tr>
+        
+        <tr>
+        <td>David Versace</td>
+        <td>Okra</td>
+        <td>2022</td>
+        <td>Jazz</td>
+        <td>Local</td>
+        </tr>
+        
+        <tr>
+        <td>At Town Hall</td>
+        <td>Nina Simone</td>
+        <td>1959</td>
+        <td>Jazz</td>
+        <td>Live</td>
+        </tr>
+        
+        <tr>
+        <td>Miami Sounds: Rare Funk and Soul From Florida 1967-1974</td>
+        <td>Various Artist</td>
+        <td>2003</td>
+        <td>Compilation</td>
+        <td></td>
+        </tr>
+        
+        <tr>
+        <td>Homework</td>
+        <td>Daft Punk</td>
+        <td>2003</td>
+        <td>Electronica</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>KID A MNESIA</td>
+        <td>Radiohead</td>
+        <td>2021</td>
+        <td>Alternative</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Awake</td>
+        <td>Tycho</td>
+        <td>2014</td>
+        <td>Electronic / Ambient</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Tripping With Nils Frahm</td>
+        <td>Nils Frahm</td>
+        <td>2020</td>
+        <td>Electronic / Classical</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Built On Glass</td>
+        <td>Chet Faker</td>
+        <td>2014</td>
+        <td>Electronic</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Night Train</td>
+        <td>James Brown</td>
+        <td>2018</td>
+        <td>Funk</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>II</td>
+        <td>Unknown Mortal Orchestra</td>
+        <td>2013</td>
+        <td>Psychedelic</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>My Baby Just Cares For Me</td>
+        <td>Nina Simone</td>
+        <td>2017</td>
+        <td>Compilation</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Im Still In Love With You</td>
+        <td>Al Green</td>
+        <td>1972</td>
+        <td>Soul</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Merriweather Post Pavillion</td>
+        <td>Animal Collective</td>
+        <td>2009</td>
+        <td>Alternative</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Bauizm</td>
+        <td>Erykah Badu</td>
+        <td>1997</td>
+        <td>R&amp;B</td>
+        <td>BREN</td>
+        </tr>
+        
+        <tr>
+        <td>The Shepherd's Dog</td>
+        <td>Iron and Wine</td>
+        <td>2007</td>
+        <td>Folk</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Ready To Die</td>
+        <td>The Notorious B.I.G.</td>
+        <td>1994</td>
+        <td>Hip Hop</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Lockjaw EP</td>
+        <td>Flume &amp; Chet Faker</td>
+        <td>2012</td>
+        <td>Electronic</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>An Awesome Wave</td>
+        <td>Alt-J</td>
+        <td>2012</td>
+        <td>Alternative</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Wonder Where We Land</td>
+        <td>SBTRKT</td>
+        <td>2014</td>
+        <td>Electronic</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>The Miseducation of Lauryn Hill</td>
+        <td>Lauryn Hill</td>
+        <td>1998</td>
+        <td>R&amp;B</td>
+        <td>BREN</td>    
+        </tr>
+        
+        <tr>
+        <td>Con Todo El Mundo</td>
+        <td>Khruangbin</td>
+        <td>2018</td>
+        <td>Psychedelic Rock</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Mezzaine</td>
+        <td>Massive Attack</td>
+        <td>1998</td>
+        <td>Trip Hop</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Oh, Inverted World</td>
+        <td>The Shins</td>
+        <td>2001</td>
+        <td>Indie</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Gone Girl</td>
+        <td>Trent Reznor &amp; Atticus Ross</td>
+        <td>2014</td>
+        <td>Sountrack</td>
+        <td>GAX</td>    
+        </tr>
+        
+        <tr>
+        <td>Jaime</td>
+        <td>Brittany Howard</td>
+        <td>2019</td>
+        <td>Neo Soul</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Love For Sale</td>
+        <td>Tony Bennett &amp; Lady Gaga</td>
+        <td>2021</td>
+        <td>Jazz</td>
+        <td>BREN</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Warpaint</td>
+        <td>Warpaint</td>
+        <td>2014</td>
+        <td>Indie</td>
+        <td></td>
+            
+        <tr>
+        <td>Songs of Leonard Cohen</td>
+        <td>Leonard Cohen</td>
+        <td>1967</td>
+        <td>Folk</td>
+        <td></td>       
+        </tr>
+        
+        <tr>
+        <td>Bon Iver</td>
+        <td>Bon Iver</td>
+        <td>2011</td>
+        <td>Alternative</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>The Crane Wife</td>
+        <td>The Decemberist</td>
+        <td>2006</td>
+        <td>Alternative</td>
+        <td></td>
+            
+        <tr>
+        <td>I Love You, It's Cool</td>
+        <td>Bear In Heaven</td>
+        <td>2012</td>
+        <td>Indie</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>City Music</td>
+        <td>Kevin Morby</td>
+        <td>2017</td>
+        <td>Indie</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Shrines</td>
+        <td>Purity Ring</td>
+        <td>2012</td>
+        <td>Electroinc</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>The Sunlandic Twins</td>
+        <td>Of Montreal</td>
+        <td>2004</td>
+        <td>Indie</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Mama's Gun</td>
+        <td>Erykah Badu</td>
+        <td>2000</td>
+        <td>R&amp;B</td>
+        <td>BREN</td>    
+        </tr>
+        
+        <tr>
+        <td>Harvest Moon</td>
+        <td>Neil Young</td>
+        <td>1992</td>
+        <td>Rock</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Mood Valiant</td>
+        <td>Hiatus Kaiyote</td>
+        <td>2012</td>
+        <td>Neo Soul</td>
+        <td>Local</td>
+        </tr>
+        
+        <tr>
+        <td>Tijuana Surfin'</td>
+        <td>Los Persuaders</td>
+        <td>1964</td>
+        <td>Surf</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Helplessness Blues</td>
+        <td>Fleet Foxes</td>
+        <td>2010</td>
+        <td>Folk</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Old Ideas</td>
+        <td>Leonard Cohen</td>
+        <td>2012</td>
+        <td>Folk</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Mr. Wonderful</td>
+        <td>Action Bronson</td>
+        <td>2015</td>
+        <td>Hip Hop</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Curtis In Chicago</td>
+        <td>Curtis Mayfield</td>
+        <td>1973</td>
+        <td>Funk</td>
+        <td>Live</td>
+        </tr>
+        
+        <tr>
+        <td>Hospitality</td>
+        <td>Hospitality</td>
+        <td>2012</td>
+        <td>Indie</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>The Velvet Underground and Nico</td>
+        <td>The Velvet Underground and Nico</td>
+        <td>1967</td>
+        <td>Art Rock</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>...'Till We Meet Again</td>
+        <td>Norah Jones</td>
+        <td>2021</td>
+        <td>Jazz</td>
+        <td>Live</td>    
+        </tr>
+        
+        <tr>
+        <td>Blues Roots Vol.10</td>
+        <td>Sonny Boy Williamson</td>
+        <td>1979</td>
+        <td>Blues / Compilation</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Rubber Factory</td>
+        <td>The Black Keys</td>
+        <td>2004</td>
+        <td>Blues Rock</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>II</td>
+        <td>WPH</td>
+        <td>2021</td>
+        <td>Classical / Experimental</td> 
+        <td>Local</td>    
+        </tr>
+        
+        </table>    
+        
+    </body>
+    
+    <script>
+        function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("catalog");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+   const myFunction = () => {
+  const trs = document.querySelectorAll('#catalog tr:not(.header)')
+  const filter = document.querySelector('#myInput').value
+  const regex = new RegExp(filter, 'i')
+  const isFoundInTds = td => regex.test(td.innerHTML)
+  const isFound = childrenArr => childrenArr.some(isFoundInTds)
+  const setTrStyleDisplay = ({ style, children }) => {
+    style.display = isFound([
+      ...children // <-- All columns
+    ]) ? '' : 'none' 
+  }
+  
+  trs.forEach(setTrStyleDisplay)
+}
+    </script>
+    
