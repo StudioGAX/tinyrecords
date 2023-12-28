@@ -69,6 +69,29 @@ margin-top: 2%;
             padding-bottom: 1vw;
             
         }
+        
+        p {
+            color: white;
+            font-family: 'Rubik', sans-serif;
+            font-size: 2vw;
+            text-align: left;
+            padding-left: 5%;
+        }
+        
+        button {
+            color: white;
+            width: 90%;
+            left: 5%;
+            position:absolute;
+            padding-left: 1vw;
+            background-color: red;
+            font-size: 2vw;
+            text-align: left;
+            font-family: 'Archivo Black', sans-serif;
+            cursor: pointer;    
+            }
+            
+        }
     </style>
     
     <body>
@@ -85,6 +108,7 @@ margin-top: 2%;
         <br>
         
     <table id="catalog">
+        
         <tr>
         <th onclick="sortTable(0)">Album</th>
         <th onclick="sortTable(1)">Artist</th>
@@ -93,7 +117,6 @@ margin-top: 2%;
         <th onclick="sortTable(4)">Other</th>
         </tr>
         
-      
         <tr>
         <td>Twin Peaks: Fire Walk With Me</td>
         <td>Angelo Badalamenti</td>
@@ -130,8 +153,8 @@ margin-top: 2%;
         <td>Miami Sounds: Rare Funk and Soul From Florida 1967-1974</td>
         <td>Various Artist</td>
         <td>2003</td>
+        <td>Funk</td>    
         <td>Compilation</td>
-        <td></td>
         </tr>
         
         <tr>
@@ -194,8 +217,8 @@ margin-top: 2%;
         <td>My Baby Just Cares For Me</td>
         <td>Nina Simone</td>
         <td>2017</td>
+        <td>Jazz></td>    
         <td>Compilation</td>
-        <td></td>    
         </tr>
         
         <tr>
@@ -473,8 +496,8 @@ margin-top: 2%;
         <td>Blues Roots Vol.10</td>
         <td>Sonny Boy Williamson</td>
         <td>1979</td>
-        <td>Blues / Compilation</td>
-        <td></td>    
+        <td>Blues</td>
+        <td>Compilation</td>    
         </tr>
         
         <tr>
@@ -493,8 +516,40 @@ margin-top: 2%;
         <td>Local</td>    
         </tr>
         
+        <tr>
+        <td>Illmatic</td>
+        <td>Nas</td>
+        <td>1994</td>
+        <td>Hip Hop</td>
+        <td></td>    
+        </tr>
+        
+        <tr>
+        <td>Blues On Fire</td>
+        <td>John Lee Hooker</td>
+        <td>2009</td>
+        <td>Blues</td>    
+        <td>Compilation</td>    
+        </tr>
+        
+        <tr>
+        <td>Coming Home</td>
+        <td>Leon Bridges</td>
+        <td>2015</td>
+        <td>Soul</td>    
+        <td></td>    
+        </tr>
+        
+           
         </table>    
         
+<br />
+<br />
+
+<button onclick="count()">TOTAL</button>
+<br />
+<p id="demo"></p>        
+<br />        
     </body>
     
     <script>
@@ -552,7 +607,7 @@ margin-top: 2%;
     }
   }
 }
-   const myFunction = () => {
+        const myFunction = () => {
   const trs = document.querySelectorAll('#catalog tr:not(.header)')
   const filter = document.querySelector('#myInput').value
   const regex = new RegExp(filter, 'i')
@@ -566,5 +621,11 @@ margin-top: 2%;
   
   trs.forEach(setTrStyleDisplay)
 }
+        function count() {
+  var x = document.getElementById("catalog").rows.length;      
+  document.getElementById("demo").innerHTML = x + " albums in collection";
+}
+        
+        
     </script>
     
